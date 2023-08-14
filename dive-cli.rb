@@ -5,21 +5,21 @@
 class DiveCli < Formula
   desc "CLI for Dive Package"
   homepage "https://hugobyte.com"
-  version "0.0.5-beta"
+  version "0.0.6-beta"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.5-beta/dive-cli_v0.0.5-beta_darwin_amd64.tar.gz"
-      sha256 "3ac813b66c987c289995cf8b414e025f5b44b4537befc6f97de1058cac7d5f44"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.6-beta/dive-cli_v0.0.6-beta_darwin_amd64.tar.gz"
+      sha256 "7a94f04890c62ac3b9c813f478110a15f0579aa6d7eaaddf9d178b4dab81b339"
 
       def install
         bin.install "dive"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.5-beta/dive-cli_v0.0.5-beta_darwin_arm64.tar.gz"
-      sha256 "a6b0da505f5f4086929f663fafd7b2e2746de100c3d2f5eb4e97b46b6c533f05"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.6-beta/dive-cli_v0.0.6-beta_darwin_arm64.tar.gz"
+      sha256 "3fd2644524a2e72556ccfbd2c476aafbf9ed61ae3b03f10e1a040271620bbc4f"
 
       def install
         bin.install "dive"
@@ -29,16 +29,16 @@ class DiveCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.5-beta/dive-cli_v0.0.5-beta_linux_arm64.tar.gz"
-      sha256 "d84d39a4f9b316d3924458ba9b6c15787a9e1eaf8e4c70b182d189b7fb65e98c"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.6-beta/dive-cli_v0.0.6-beta_linux_arm64.tar.gz"
+      sha256 "a1ab0d810deaa834812406a736c102cd3f8920e2294ee58bfe094f90293b26e3"
 
       def install
         bin.install "dive"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.5-beta/dive-cli_v0.0.5-beta_linux_amd64.tar.gz"
-      sha256 "6b0cb10410f267b37196c0d5ad815e2c749bac3e2b32444bf3ea258c59b27f5e"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.6-beta/dive-cli_v0.0.6-beta_linux_amd64.tar.gz"
+      sha256 "a6cac032b9795fd04d7e168146ed07f2468e5c0419572e01035b8f183b763b5c"
 
       def install
         bin.install "dive"
