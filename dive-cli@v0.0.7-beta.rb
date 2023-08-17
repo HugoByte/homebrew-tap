@@ -11,7 +11,7 @@ class DiveCliATv007Beta < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/HugoByte/DIVE/releases/download/v0.0.7-beta/dive-cli_v0.0.7-beta_darwin_arm64.tar.gz"
-      sha256 "62ab232454f0c9cd8bca2fb83e78704f78327e88b4a4c2d7fc6e96bad1acc8b0"
+      sha256 "83811b582c237b6d8c96777bf4978a59a6f6a70357552100c9939d769c234555"
 
       def install
         bin.install "dive"
@@ -19,7 +19,7 @@ class DiveCliATv007Beta < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/HugoByte/DIVE/releases/download/v0.0.7-beta/dive-cli_v0.0.7-beta_darwin_amd64.tar.gz"
-      sha256 "a6cd1f03e44ca8b0eeeaa92da6a28ad3ec7bcfe4a4fae237f3b82010489e17bf"
+      sha256 "bff4ccc0d327cb00149ac54d4c9bb84d3ec250f1777be0e20e5e7eff42180974"
 
       def install
         bin.install "dive"
@@ -30,7 +30,7 @@ class DiveCliATv007Beta < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/HugoByte/DIVE/releases/download/v0.0.7-beta/dive-cli_v0.0.7-beta_linux_arm64.tar.gz"
-      sha256 "5ac96613d9de444f93441c86330223ca42a3705151b71cca53049f5a95a026f2"
+      sha256 "61e4e5cc335b4c0c6aa91c3c3bd6b0e5a00a7f491ba26880cde627c4ecbf3b70"
 
       def install
         bin.install "dive"
@@ -38,7 +38,7 @@ class DiveCliATv007Beta < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/HugoByte/DIVE/releases/download/v0.0.7-beta/dive-cli_v0.0.7-beta_linux_amd64.tar.gz"
-      sha256 "734ab9f56596a5ee6cabb599c1877d4bfd1a5ad149de22242bd829fd642728b9"
+      sha256 "59c00f3b83b4ff94d7b195153355b01ff2ebf63837a1046d0b2594af8bd7938a"
 
       def install
         bin.install "dive"
