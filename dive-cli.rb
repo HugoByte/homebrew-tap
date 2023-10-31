@@ -5,21 +5,21 @@
 class DiveCli < Formula
   desc "CLI for Dive Package"
   homepage "https://hugobyte.com"
-  version "0.0.13-beta"
+  version "0.0.14-beta"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.13-beta/dive-cli_v0.0.13-beta_darwin_amd64.tar.gz"
-      sha256 "636cc04cdae551c51b9e7b0a6635796042cf6d76cfe41bede78f1d2490bac760"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.14-beta/dive-cli_v0.0.14-beta_darwin_amd64.tar.gz"
+      sha256 "2b93834b8f677c28ccd058bc87281a6bf7254779b07b6e4daa78a78795e57097"
 
       def install
         bin.install "dive"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.13-beta/dive-cli_v0.0.13-beta_darwin_arm64.tar.gz"
-      sha256 "b2ecde3dbde2c426ab78212b208bbd5ff9c183ddfc4f384af533376cd013b361"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.14-beta/dive-cli_v0.0.14-beta_darwin_arm64.tar.gz"
+      sha256 "589b87c005a8d607b3cc000db351875e8fbae99b597127d247e03b3eed37b8f2"
 
       def install
         bin.install "dive"
@@ -28,17 +28,17 @@ class DiveCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.13-beta/dive-cli_v0.0.13-beta_linux_amd64.tar.gz"
-      sha256 "8d45ae1300375fb08db14309483a675b454f0047feff711ac8893b0ca8fd2f5e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.14-beta/dive-cli_v0.0.14-beta_linux_arm64.tar.gz"
+      sha256 "a9008cb3e34000e042f902d434cd285ab9787687c6628c9aad40aee2e874dda3"
 
       def install
         bin.install "dive"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.13-beta/dive-cli_v0.0.13-beta_linux_arm64.tar.gz"
-      sha256 "8f0966a8357991092e77a0bcbb272d706a1b79953408837767d6472f35004b66"
+    if Hardware::CPU.intel?
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.0.14-beta/dive-cli_v0.0.14-beta_linux_amd64.tar.gz"
+      sha256 "0e3feaebe153309f318b5c02eb0a8ae62c488e67bac1aa815b3e8698eebaa685"
 
       def install
         bin.install "dive"
