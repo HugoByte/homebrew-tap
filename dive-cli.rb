@@ -5,23 +5,23 @@
 class DiveCli < Formula
   desc "CLI for Dive Package"
   homepage "https://hugobyte.com"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache 2.0"
 
-  depends_on "kurtosis-cli@0.86.10"
+  depends_on "kurtosis-cli@0.87.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.0/dive-cli_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "c120f7daa19cea96457d230c6ff565a9cf699d362225b69f8082fbcf9b754415"
+    if Hardware::CPU.arm?
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.1/dive-cli_v0.1.1_darwin_arm64.tar.gz"
+      sha256 "545430df6d2f6c7a89f86a9eeab24b026ec39f89b2828593ff1e80e73387d839"
 
       def install
         bin.install "dive"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.0/dive-cli_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "997b1e6fb8288d0be2f08f79c3d2e7762fa67375e1b2f73ea5f8d36b1871d8d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.1/dive-cli_v0.1.1_darwin_amd64.tar.gz"
+      sha256 "1eba1f94568fe28828ce40c1f718bc10d8e63cd26623fb0022d06c0955483e2c"
 
       def install
         bin.install "dive"
@@ -31,16 +31,16 @@ class DiveCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.0/dive-cli_v0.1.0_linux_arm64.tar.gz"
-      sha256 "a9074929dc973533530b0d7743ef00c2ebc6ff6c06c1d60a38b170afcd8ca3a4"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.1/dive-cli_v0.1.1_linux_arm64.tar.gz"
+      sha256 "1a28b77b580ba2a7fd32b987fa5d3e3c8ce69fba601b20ed244b23af55d0257c"
 
       def install
         bin.install "dive"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.0/dive-cli_v0.1.0_linux_amd64.tar.gz"
-      sha256 "58c8dd9423b6ec70bfafe19215a3197d8b8d0b0da0a6024e27ea4eb41caa7ca4"
+      url "https://github.com/HugoByte/DIVE/releases/download/v0.1.1/dive-cli_v0.1.1_linux_amd64.tar.gz"
+      sha256 "865172395e9e0d0712f8f6ef9a91d76dcd6069059deb08d069d65d17f80dbc22"
 
       def install
         bin.install "dive"
